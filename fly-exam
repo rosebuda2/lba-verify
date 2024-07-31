@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html {
+            display: none;
+        }
+    </style>
+    <script>
+        function getTestStudioPageTitle() {
+            return "LPLUS TestStudio";
+        }
+
+        function useSaml2Login() {
+            return false;
+        }
+
+        var isLtsEditor = "False";
+        var isProctor = "False";
+        if (isProctor === "False" && isLtsEditor === "False") {
+            if (self == top) {
+                document.documentElement.style.display = 'block';
+            } 
+        } else {
+            document.documentElement.style.display = 'block';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>LPLUS TestStudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- #FAVICONS -->
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZNQEAWzYCAFs3AwBcOAQAXTkFAF46BgBfOgYAXzsHAGE8CABhPQkAYj0JAGI+CgBjPgoAZD8LAGVADABmQAwAZkENAGdCDgBoQg4AaEMPAGlDDwBqRREAa0URAGxHEwBtRxMAbkgUAG9JFQBwShYAcUoWAHFLFwBxTh0AckwYAHNMGAB0TRkAdE4aAHVOGgB1TxsAdVIiAHZTIgB4UR0AeVIeAHlTHwB6VSUAfFQgAHxVIQB9ViIAfVgnAH5WIgB+WikAf1opAIBYJACAWSUAgVklAIJaJgCDWycAhFwoAIVdKQCGXioAhmExAIdeKgCHaD0AiGAsAIlhLQCKYS0AimIuAItiLgCLYy8AjWQwAI1lMQCNZzYAj2YyAI9nMwCRaDQAkmk1AJNpNQCTajYAk3BCAJVsOACWbDgAlnlSAJdtOQCXbjoAl3pTAJeBYQCYd00AmHhOAJh8VQCZbzsAmXhOAJpwPACagFwAm3E9AJxyPgCcgl4AnnRAAJ90QACgdkIAoIlpAKF/VQChimkAo3hEAKR5RQCnj24ArJNzAK+WdgC1oogAu6WHAMOymwDEs5wAyK2MAMm7pwDLvKkA08SwANbKugDd08YA5t/VAOjg1gDt6OIA7uniAPXz7wD18/AA9vPwAP7+/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYRERERENDQgIBAEAAAAAUxYWFhYWHhAQDAwFBQAAAAAaGhoaWmkVFRAQCgoDAAAAISEhIW53JhcXEhIKCgMAACcnJzF4em4bGxYWDwsHAwAsLCxnenp6Tx0ZGRMOCgYCMzMzcXp6enUuHRkZEw0IBDg4THpzaHl6ayMdGRURDAc+Pmp0RTZVeXpWIhsYFA4JRERwYj47O1h5eTAgGhYRDElJSUZGPzs7VHZyIxwYFA5OTk5KSkM+OTU6cm8fGRUQWVlZTk5HQj03MitsZhoWEV5eXldNSEQ+ODQtKFJdPBJkZF9bUEpGQDk1LSgjKiUTbWVgXFFLRkE5NS8pJB0YYwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" type="image/x-icon">
+    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZNQEAWzYCAFs3AwBcOAQAXTkFAF46BgBfOgYAXzsHAGE8CABhPQkAYj0JAGI+CgBjPgoAZD8LAGVADABmQAwAZkENAGdCDgBoQg4AaEMPAGlDDwBqRREAa0URAGxHEwBtRxMAbkgUAG9JFQBwShYAcUoWAHFLFwBxTh0AckwYAHNMGAB0TRkAdE4aAHVOGgB1TxsAdVIiAHZTIgB4UR0AeVIeAHlTHwB6VSUAfFQgAHxVIQB9ViIAfVgnAH5WIgB+WikAf1opAIBYJACAWSUAgVklAIJaJgCDWycAhFwoAIVdKQCGXioAhmExAIdeKgCHaD0AiGAsAIlhLQCKYS0AimIuAItiLgCLYy8AjWQwAI1lMQCNZzYAj2YyAI9nMwCRaDQAkmk1AJNpNQCTajYAk3BCAJVsOACWbDgAlnlSAJdtOQCXbjoAl3pTAJeBYQCYd00AmHhOAJh8VQCZbzsAmXhOAJpwPACagFwAm3E9AJxyPgCcgl4AnnRAAJ90QACgdkIAoIlpAKF/VQChimkAo3hEAKR5RQCnj24ArJNzAK+WdgC1oogAu6WHAMOymwDEs5wAyK2MAMm7pwDLvKkA08SwANbKugDd08YA5t/VAOjg1gDt6OIA7uniAPXz7wD18/AA9vPwAP7+/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYRERERENDQgIBAEAAAAAUxYWFhYWHhAQDAwFBQAAAAAaGhoaWmkVFRAQCgoDAAAAISEhIW53JhcXEhIKCgMAACcnJzF4em4bGxYWDwsHAwAsLCxnenp6Tx0ZGRMOCgYCMzMzcXp6enUuHRkZEw0IBDg4THpzaHl6ayMdGRURDAc+Pmp0RTZVeXpWIhsYFA4JRERwYj47O1h5eTAgGhYRDElJSUZGPzs7VHZyIxwYFA5OTk5KSkM+OTU6cm8fGRUQWVlZTk5HQj03MitsZhoWEV5eXldNSEQ+ODQtKFJdPBJkZF9bUEpGQDk1LSgjKiUTbWVgXFFLRkE5NS8pJB0YYwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" type="image/x-icon">
+    <!-- #GOOGLE FONT -->
+    <link rel="style" href="/Content/fontApi.css">
+    <link href="/ContentCSS/vendor?v=19YrmuUDS2O1fX6Zvf5v5zLRr3YHbpbGCq9Xzs_BWyY1" rel="stylesheet"/>
+<link href="/api/UiLayout/GetCssPlugin" rel="stylesheet"/>
+<link href="/api/UiLayout/GetCssThemePlugin" rel="stylesheet"/>
+<link href="/api/UiLayout/GetCssTheme" rel="stylesheet"/>
+<link href="/ContentCSS/custom?v=NhnALaBPhfPXDCpzo_Wl6vuLXwD5NWnK2n6gvyMpUmI1" rel="stylesheet"/>
+
+</head>
+<body class="">
+    <!--[if lt IE 9]>
+        <header id="header">
+            <div class="alert alert-danger alert-block" style="width: 100%">
+                <h4 class="alert alert-heading">Please deactivate the compatibility mode or upgrade your browser. Here are the <a href="https://browser-update.org/en/update.html" target="_blank"> instructions how to update yor web browser</a>.</h4>
+                <h4 class="alert alert-heading">Bitte deaktivieren Sie den Kompatibilitätsmodus oder aktualisieren Sie Ihren Browser. Hier finden Sie die <a href="https://browser-update.org/de/update.html" target="_blank"> Anleitung wie Sie Ihrem Browser aktualisieren</a>.</h4>
+            </div>
+        </header>
+    <![endif]-->
+    <noscript>
+        <header id="header">
+            <div class="alert alert-danger alert-block" style="width: 100%">
+                <h4 class="alert alert-heading">For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="https://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</h4>
+                <h4 class="alert alert-heading">Um den vollen Funktionsumfang dieser Webseite zu erfahren, benötigen Sie JavaScript. Hier finden Sie die <a href="https://www.enable-javascript.com/de/" target="_blank">Anleitung wie Sie JavaScript in Ihrem Browser einschalten</a>.</h4>
+            </div>
+        </header>
+    </noscript>
+    <div id="applicationHost">
+        <div id="splash" class="splash">
+    
+    <i class="fa fa-circle-o-notch fa-spin fa-5x active text-primary"></i>
+</div>
+    </div>
+    <script src="/Scripts/vendor?v=SGQy-pPDcObd1bDsUnbFslX8xMsQKfXZv5IWJ2HpdF41"></script>
+<script src="/bundles/themeplugin?v=njo6G6LW8BsDE_BZxY2c_n1p4pVdN7xvSytZJn8ZQNI1"></script>
+
+        <script type="text/javascript" src="/App/app.js"></script>
+    <script src="/lplusCom/signalr?v=4OffKgJP3BKl-a0HMCu8SoFYj-iqmWy-1sbyLwYhtvk1"></script>
+
+    <script src="/signalr/hubs"></script>
+</body>
+</html>
